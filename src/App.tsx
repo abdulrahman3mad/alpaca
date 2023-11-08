@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Header from './components/Header/Header';
-import Image from './components/Image/Image';
+import ImageContainer from './components/ImageContainer/ImageContainer';
 import Features from './components/Features';
 import RandomButton from './components/RandomButton';
 import DownloadButton from './components/DownloadButton';
@@ -46,7 +46,7 @@ function App() {
         <main className='mt-4'>
           <div className="row justify-content-evenly">
             <div className="col-md-6 mb-5 mb-md-0">
-              <Image imgs={featuresStyles} background={featuresStyles.at(0)?.activeStyle!}/>
+              <ImageContainer imgs={featuresStyles} background={featuresStyles.at(0)?.activeStyle!}/>
               <div className='d-flex justify-content-center gap-5'>
                 <RandomButton randomHandler={ randomHandler } />
                 <DownloadButton downloadHandler={ downloadHandler } />
