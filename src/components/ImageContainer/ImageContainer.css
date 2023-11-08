@@ -7,23 +7,3 @@
   width: 100%;
   height:400px;
 }
-
-.imgsContainer img {
-  height:400px;
-  position: absolute;
-  margin:auto;
-  left:0;
-  top:0;
-}
-
-@media screen and (max-width: 1020px) {
-  .imgsContainer img{
-    width: 100%;
-    height:400px;
-    object-fit: cover;
-  }
-}
-
-.imgsContainer img.eyes, img.mouth{
-  z-index:100
-}

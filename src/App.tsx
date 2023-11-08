@@ -13,10 +13,6 @@ function App() {
   const [featuresStyles, setFeaturesStyles] = useState<FeaturesStyleType[]>(featuresStylesData)
   const [activeFeature, setActiveFeature] = useState<number>(0);
 
-  const FeatureClickHandler = (index: number): void => {
-    setActiveFeature(index);
-  }
-
   const downloadHandler = (): void => {
     combineImagesAndDownload();
   }
@@ -58,7 +54,7 @@ function App() {
               <Features
                 featuresStyles={featuresStyles}
                 activeFeature={activeFeature}
-                featureClickHandler={FeatureClickHandler}
+                featureClickHandler={(index) => setActiveFeature(index)}
                 featureStyleClickHandler={FeatureStyleClickHandler}
               />
             </div>

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Image from "../Image/";
 import "./ImageContainer.css";
 
@@ -14,7 +15,7 @@ const ImageContainer: React.FC<Props> = ({ imgs, background }) => {
       <div className="background" style={{backgroundImage: `url(${imgsPath}/backgrounds/${background}.png)`}}>
         {
           imgs.map((img)=>{
-            return <Image img={img}/>
+            return <Image img={img} key={img.type}/>
           })
         }
       </div>
@@ -22,4 +23,4 @@ const ImageContainer: React.FC<Props> = ({ imgs, background }) => {
   )
 }
 
-export default ImageContainer;
+export default memo(ImageContainer);
