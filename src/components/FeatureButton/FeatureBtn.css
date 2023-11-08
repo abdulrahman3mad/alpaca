@@ -1,0 +1,10 @@
+.feature-btn{
+  transition: 0.5s background-color, 0.5s color;
+  color:#23509C
+}
+
+.feature-btn.active, .feature-btn:hover{
+    background-color:#23509C;
+    color:white;
+    border:none;
+}
